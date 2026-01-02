@@ -1,8 +1,15 @@
+import { Outlet } from "react-router-dom"
+import Navbar from "../components/navigation/Navbar"
+import Sidebar from "../components/navigation/Sidebar"
 import React from 'react'
 
 function AdminLayout() {
   return (
-    <div>AdminLayout</div>
+    <div>
+      <Navbar/>
+      <Sidebar/>
+      <Outlet/>
+    </div>
   )
 }
 

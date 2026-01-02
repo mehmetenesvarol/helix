@@ -1,8 +1,13 @@
+import { Outlet } from "react-router-dom"
+import Navbar from "../components/navigation/Navbar"
 import React from 'react'
 
 function AuthLayout() {
   return (
-    <div>AuthLayout</div>
+    <div>
+      <Navbar/>
+      <Outlet/>
+    </div>
   )
 }
 
