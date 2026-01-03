@@ -1,4 +1,5 @@
 import React from 'react'
+import "./AdminSidebar.css";
 
 function AdminSidebar() {
   return (

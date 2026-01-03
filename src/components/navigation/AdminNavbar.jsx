@@ -1,5 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import React from "react";
+import "./AdminNavbar.css";
+import logo from "../../assets/images/navbar-logo.png"
 
 function AdminNavbar() {
   const navigate = useNavigate();
@@ -13,13 +14,12 @@ function AdminNavbar() {
     <div className="navbar-wrapper">
       <div className="admin-navbar">
         <div className="admin-navbar-left">
-          <div className="logo-admin">Helix Admin</div>
-
+          <div className="logo-admin">
+            <img src={logo} alt="" />
+          </div>
           <ul className="nav-links">
             <li>
-              <NavLink to="/admin" end>
-                Dashboard
-              </NavLink>
+              <NavLink to="/admin" end>Dashboard</NavLink>
             </li>
             <li>
               <NavLink to="/admin/users">Users</NavLink>

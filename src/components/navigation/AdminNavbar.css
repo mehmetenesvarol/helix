@@ -1,0 +1,41 @@
+.admin-navbar {
+  width: 100%;
+  display: flex;
+  background-color: rgb(129, 129, 129);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.admin-navbar-left {
+  width: 70%;
+  display: flex;
+  background-color: rgb(112, 85, 85);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.admin-navbar-right {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-navbar-left ul {
+  display: flex;
+  background-color: rgb(236, 119, 119);
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.admin-navbar-left ul li {
+  margin: 5px;
+}
+
+.admin-navbar-left ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(30, 6, 95);
+}
