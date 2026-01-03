@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom"
-import Navbar from "../components/navigation/Navbar"
-import Sidebar from "../components/navigation/Sidebar"
+import PublicNavbar from "../components/navigation/PublicNavbar"
+import PublicSidebar from "../components/navigation/PublicSidebar"
 import React from 'react'
 
 function PublicLayout() {
   return (
     <div>
-      <Navbar/>
-      <Sidebar/>
+      <PublicNavbar/>
+      <PublicSidebar/>
       <Outlet/>
     </div>
   )
