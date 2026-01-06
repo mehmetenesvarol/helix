@@ -1,0 +1,109 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Laptop",
+      "price": 15000,
+      "category": "electronics",
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "title": "Phone",
+      "price": 9000,
+      "category": "electronics",
+      "stock": 25
+    },
+    {
+      "id": 3,
+      "title": "Laptop",
+      "price": 55000,
+      "category": "electronics",
+      "stock": 15
+    },
+    {
+      "id": 4,
+      "title": "Headphones",
+      "price": 3000,
+      "category": "electronics",
+      "stock": 40
+    },
+    {
+      "id": 5,
+      "title": "Smart Watch",
+      "price": 7000,
+      "category": "electronics",
+      "stock": 30
+    },
+    {
+      "id": 6,
+      "title": "Office Chair",
+      "price": 12000,
+      "category": "furniture",
+      "stock": 10
+    },
+    {
+      "id": 7,
+      "title": "Backpack",
+      "price": 2500,
+      "category": "accessories",
+      "stock": 50
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "age": 28,
+      "location": "United States",
+      "email": "john.smith@example.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "firstName": "Emily",
+      "lastName": "Johnson",
+      "age": 34,
+      "location": "United Kingdom",
+      "email": "emily.johnson@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 3,
+      "firstName": "Michael",
+      "lastName": "Brown",
+      "age": 22,
+      "location": "Canada",
+      "email": "michael.brown@example.com",
+      "password": "michael123"
+    },
+    {
+      "id": 4,
+      "firstName": "Sarah",
+      "lastName": "Williams",
+      "age": 29,
+      "location": "Australia",
+      "email": "sarah.williams@example.com",
+      "password": "sarahPass1"
+    },
+    {
+      "id": 5,
+      "firstName": "David",
+      "lastName": "Miller",
+      "age": 41,
+      "location": "Germany",
+      "email": "david.miller@example.com",
+      "password": "davidSecure"
+    },
+    {
+      "id": 6,
+      "firstName": "Olivia",
+      "lastName": "Taylor",
+      "age": 25,
+      "location": "Netherlands",
+      "email": "olivia.taylor@example.com",
+      "password": "olivia123"
+    }
+  ]
+}
