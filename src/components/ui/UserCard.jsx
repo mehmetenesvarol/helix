@@ -8,8 +8,9 @@ function UserCard({user,onRemove,onEdit}) {
         <span>-{user.firstName}</span>
         <span>-{user.secondName}</span>
         <span>-{user.age}</span>
-        <span>-{user.email}</span>
         <span>-{user.location}</span>
+        <span>-{user.email}</span>
+        <span>-{user.password}</span>
       </div>
       <div className="user-edit">
         <button onClick={() => onRemove(user.id)}>Remove</button>
