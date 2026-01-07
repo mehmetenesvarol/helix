@@ -1,6 +1,6 @@
 import React from "react";
 
-function UserCard({user,onRemove,onEdit}) {
+function UserCard({user,onRemove,onChange}) {
   return (
     <div className="user-card">
       <div className="user-info">
@@ -12,9 +12,9 @@ function UserCard({user,onRemove,onEdit}) {
         <span>-{user.email}</span>
         <span>-{user.password}</span>
       </div>
-      <div className="user-edit">
+      <div className="user-buttons">
+        <button onClick={() => onChange(user.id)}>Change</button>
         <button onClick={() => onRemove(user.id)}>Remove</button>
-        <button onClick={() => onEdit(user.id)}>Edit</button>
       </div>
     </div>
   );

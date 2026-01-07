@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { getUsers } from "../../services/user.service";
-import UserCard from "../../components/ui/UserCard"
+import { getUsers, deleteUser } from "../../services/user.service";
+import UserCard from "../../components/ui/UserCard";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -12,51 +12,18 @@ function Users() {
     });
   }, []);
 
-  console.log(users);
+  const handleRemove = async (id) => {
+    await deleteUser(id);
+    setUsers(users.filter((p) => p.id !== id));
+  };
 
   return (
     <div>
-      {users.map(u =>(
-        <UserCard key={u.id} user={u}></UserCard>
+      {users.map((u) => (
+        <UserCard key={u.id} user={u} onRemove={handleRemove} />
       ))}
     </div>
   );
 }
 
 export default Users;
-
-/*
-
-import React from 'react'
-import { useEffect, useState } from "react"
-import { getProducts } from "../../services/product.service"
-
-function Products() {
-
-  const [products, setProducts] = useState([])
-  
-    useEffect(() => {
-    getProducts().then(data => {
-      setProducts(data)
-    })
-  }, [])
-
-  console.log(products)
-  
-  return (
-    <div>
-    {products.map(p =>(
-      <div key={p.id}>
-        <hr />
-        <h2>{p.id}</h2>
-        <span>{p.title}</span>
-        <span>{p.price}</span>
-      </div>
-    ))}    
-    </div>
-  )
-}
-
-export default Products
-
-*/
