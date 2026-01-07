@@ -1,31 +1,37 @@
-import React from 'react'
-import { useEffect, useState } from "react"
-import { getProducts } from "../../services/product.service"
+import React from "react";
+import { useEffect, useState } from "react";
+import { getProducts } from "../../services/product.service";
+import ProductCard from "../../components/ui/ProductCard";
 
 function Products() {
+  const [products, setProducts] = useState([]);
 
-  const [products, setProducts] = useState([])
-  
-    useEffect(() => {
-    getProducts().then(data => {
-      setProducts(data)
-    })
-  }, [])
+  useEffect(() => {
+    getProducts().then((data) => {
+      setProducts(data);
+    });
+  }, []);
 
-  console.log(products)
-  
   return (
     <div>
-    {products.map(p =>(
-      <div key={p.id}>
-        <hr />
-        <h2>{p.id}</h2>
-        <span>{p.title}</span>
-        <span>{p.price}</span>
+      <div className="products-container">
+        <div className="products-container-title">
+          <span>ID</span>
+          <span>Title</span>
+          <span>Price</span>
+          <span>Category</span>
+          <span>Stock</span>
+        </div>
+        <div className="products-wrapper">
+          {products.map((p) => (
+            <div key={p.id}>
+              <ProductCard product={p}/>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}    
     </div>
-  )
+  );
 }
 
-export default Products
+export default Products;
