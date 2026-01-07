@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./AdminNavbar.css";
-import logo from "../../assets/images/navbar-logo.png"
+import logo from "../../assets/images/navbar-logo.png";
 
 function AdminNavbar() {
   const navigate = useNavigate();
@@ -19,13 +19,18 @@ function AdminNavbar() {
           </div>
           <ul className="nav-links">
             <li>
-              <NavLink to="/admin" end>Dashboard</NavLink>
+              <NavLink to="/admin" end>
+                Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/admin/analytics">Analytics</NavLink>
             </li>
             <li>
               <NavLink to="/admin/users">Users</NavLink>
             </li>
             <li>
-              <NavLink to="/admin/analytics">Analytics</NavLink>
+              <NavLink to="/admin/products">Products</NavLink>
             </li>
           </ul>
         </div>

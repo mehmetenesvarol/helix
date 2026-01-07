@@ -14,9 +14,10 @@ import Contact from "../pages/public/Contact";
 import Faq from "../pages/public/Faq";
 import Products from "../pages/public/Products";
 
-import Analytics from "../pages/admin/Analytics";
 import Dashboard from "../pages/admin/Dashboard";
+import Analytics from "../pages/admin/Analytics";
 import Users from "../pages/admin/Users";
+import AdminProducts from "../pages/admin/Products";
 
 function AppRoutes() {
   return (
@@ -36,6 +37,7 @@ function AppRoutes() {
           <Route index element={<Dashboard />} />
           <Route path="users" element={<Users />} />
           <Route path="analytics" element={<Analytics />} />
+          <Route path="products" element={<AdminProducts />} />
         </Route>
       </Route>
     </Routes>
