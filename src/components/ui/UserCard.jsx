@@ -2,13 +2,25 @@ import React from "react";
 import { useState } from "react";
 
 function UserCard({ user, onRemove, onChange }) {
+  const [userValue, setUserValue] = useState({ ...user });
   const [isEditing, setIsEditing] = useState(false);
-  const [firstName, setFirstName] = useState(user.firstName);
-  const [lastName, setLastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age);
-  const [location, setLocation] = useState(user.location);
-  const [email, setEmail] = useState(user.email);
-  const [password, setPassword] = useState(user.password);
+
+  const applyChanges = () => {
+    if (!/^\d+$/.test(userValue.age)) {
+      alert("Please enter a valid age");
+      return;
+    }
+    if (!userValue.email.includes("@")) {
+      alert("Please enter a valid email address");
+      return;
+    }
+    if (userValue.password.length < 6) {
+      alert("Password must be at least 6 characters");
+      return;
+    }
+    onChange(userValue);
+    setIsEditing(false);
+  };
 
   return (
     <div className="user-card">
@@ -30,41 +42,43 @@ function UserCard({ user, onRemove, onChange }) {
       {isEditing && (
         <div className="edit-bar">
           <input
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+            value={userValue.firstName}
+            onChange={(e) =>
+              setUserValue((prev) => ({ ...prev, firstName: e.target.value }))
+            }
           />
           <input
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+            value={userValue.lastName}
+            onChange={(e) =>
+              setUserValue((prev) => ({ ...prev, lastName: e.target.value }))
+            }
           />
-          <input value={age} onChange={(e) => setAge(e.target.value)} />
           <input
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
+            value={userValue.age}
+            onChange={(e) =>
+              setUserValue((prev) => ({ ...prev, age: e.target.value }))
+            }
           />
-          <input value={email} onChange={(e) => setEmail(e.target.value)} />
           <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={userValue.location}
+            onChange={(e) =>
+              setUserValue((prev) => ({ ...prev, location: e.target.value }))
+            }
+          />
+          <input
+            value={userValue.email}
+            onChange={(e) =>
+              setUserValue((prev) => ({ ...prev, email: e.target.value }))
+            }
+          />
+          <input
+            value={userValue.password}
+            onChange={(e) =>
+              setUserValue((prev) => ({ ...prev, password: e.target.value }))
+            }
           />
 
-          <button
-            onClick={() => {
-              const updatedUser = {
-                id: user.id,
-                firstName,
-                lastName,
-                age,
-                location,
-                email,
-                password,
-              };
-              onChange(updatedUser);
-              setIsEditing(false);
-            }}
-          >
-            Apply Changes
-          </button>
+          <button onClick={applyChanges}>Apply Changes</button>
         </div>
       )}
     </div>
