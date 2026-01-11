@@ -35,7 +35,17 @@ function UserCard({ user, onRemove, onChange }) {
       </div>
 
       <div className="user-buttons">
-        <button onClick={() => setIsEditing(!isEditing)}>Change</button>
+        <button
+          onClick={() => {
+            if (isEditing) {
+              setUserValue({ ...user });
+            }
+            setIsEditing(!isEditing);
+          }}
+        >
+          Change
+        </button>
+
         <button onClick={() => onRemove(user.id)}>Remove</button>
       </div>
 
