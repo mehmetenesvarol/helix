@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./PublicNavbar.css";
+import logo from "../../assets/images/navbar-logo.png";
 import React from "react";
 
 function PublicNavbar() {
@@ -7,8 +8,9 @@ function PublicNavbar() {
     <div className="navbar-wrapper">
       <div className="public-navbar">
         <div className="public-navbar-left">
-          <div className="logo">Helix</div>
-
+          <div className="logo-admin">
+            <img src={logo} alt="" />
+          </div>
           <ul className="nav-links">
             <li>
               <NavLink to="/" end>

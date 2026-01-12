@@ -7,14 +7,16 @@
 }
 
 .admin-navbar-left {
+  min-width: 780px;
   width: 80%;
   display: flex;
-  background-color: rgb(112, 85, 85);
+  background-color: rgb(154, 126, 253);
   justify-content: space-around;
   align-items: center;
 }
 
 .admin-navbar-right {
+  min-width: 100px;
   width: 20%;
   display: flex;
   justify-content: center;
@@ -22,7 +24,11 @@
 }
 
 .logo-admin{
-  width: 200px;
+  width: 100px;
+}
+
+.logo-admin img{
+  width: 150px;
 }
 
 .nav-links{
@@ -30,10 +36,10 @@
 }
 
 .admin-navbar-left ul {
-  display: grid;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  grid-template-rows: repeat(3,30px);
-  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  justify-content: space-around;
 }
 
 .admin-navbar-left ul li {
@@ -45,9 +51,14 @@
   align-items: center;
 }
 
+
 .admin-navbar-left ul li a {
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
   color: rgb(30, 6, 95);
+}
+
+.admin-navbar-left ul li a:hover{
+  color: rgb(80, 172, 172);
 }

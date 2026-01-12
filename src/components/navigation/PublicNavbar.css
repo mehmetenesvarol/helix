@@ -1,3 +1,64 @@
+.public-navbar {
+  width: 100%;
+  display: flex;
+  background-color: rgb(129, 129, 129);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.public-navbar-left {
+  min-width: 780px;
+  width: 80%;
+  display: flex;
+  background-color: rgb(154, 126, 253);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.public-navbar-right {
+  min-width: 100px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-public{
+  width: 100px;
+}
+
+.logo-public img{
+  width: 150px;
+}
+
+.nav-links{
+  width: 70%;
+}
+
+.public-navbar-left ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.public-navbar-left ul li {
+  height: 40px;
+  margin: 5px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
+.public-navbar-left ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(30, 6, 95);
+}
 
+.public-navbar-left ul li a:hover{
+  color: rgb(80, 172, 172);
+}

@@ -36,6 +36,9 @@ function AdminNavbar() {
         </div>
 
         <div className="admin-navbar-right">
+          <h3>
+            Admin
+          </h3>
           <button onClick={handleLogout} className="logout-btn">
             Logout
           </button>
