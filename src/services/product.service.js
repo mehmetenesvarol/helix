@@ -17,3 +17,18 @@ export const deleteProduct = async (id) => {
   }
   return res.json();
 };
+
+
+export const updateProduct = async (id, updatedProduct) => {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: "PUT", // veya PATCH, backend’e bağlı olarak
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedProduct),
+  });
+  if (!res.ok) {
+    throw new Error("Failed to update product");
+  }
+  return res.json();
+};
