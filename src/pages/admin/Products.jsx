@@ -1,6 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { getProducts,deleteProduct } from "../../services/product.service";
+import {
+  getProducts,
+  deleteProduct,
+  updateProduct,
+} from "../../services/product.service";
 import EditProductCard from "../../components/ui/EditProductCard";
 
 function Products() {
@@ -17,6 +21,17 @@ function Products() {
     setProducts(products.filter((p) => p.id !== id));
   };
 
+  const handleUpdate = async (updatedProduct) => {
+    try {
+      const result = await updateProduct(updatedProduct.id, updatedProduct);
+
+      setProducts((prevProduct) =>
+        prevProduct.map((u) => (u.id === result.id ? result : u))
+      );
+    } catch (error) {
+      console.error("Update failed:", error);
+    }
+  };
 
   return (
     <div className="edit-products-container">
