@@ -17,17 +17,6 @@ function Products() {
     setProducts(products.filter((p) => p.id !== id));
   };
 
-  // editing func
-  // const handleChange = async (id) => {
-  //   const updatedProducts = products.map((p) =>
-  //     p.id === id ? { ...p, stock: p.stock + 1 } : p
-  //   );
-
-  //   const updatedProduct = updatedProducts.find((p) => p.id === id);
-  //   await updateProduct(id, updatedProduct);
-
-  //   setProducts(updatedProducts);
-  // };
 
   return (
     <div className="edit-products-container">
@@ -44,7 +33,7 @@ function Products() {
             key={p.id}
             product={p}
             onRemove={handleRemove}
-            // onChange={handleChange}
+            onChange={handleUpdate}
           />
         ))}
       </div>
